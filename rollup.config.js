@@ -34,7 +34,7 @@ import dataURLPlugin from './lib/data-url-plugin';
 import entryDataPlugin from './lib/entry-data-plugin';
 
 function resolveFileUrl({ fileName }) {
-  return JSON.stringify(fileName.replace(/^static\//, './'));
+  return JSON.stringify(fileName.replace(/^static\//, '/'));
 }
 
 // With AMD output, Rollup always uses document.baseURI, which breaks in workers.
